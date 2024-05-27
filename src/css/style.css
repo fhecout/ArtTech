@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+}
+
+.nav-bar {
+    background-color: #004AAD;
+    padding: 10px 0;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 5px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 7px;
+}
+
+.content-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background: url('/src/images/FotoFerramentas.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    border-radius: 10px;
+}
+
+.content h1 {
+    color: white;
+    font-size: 36px;
+}
+
+.content p {
+    color: white;
+    line-height: 1.6;
+}
+
+.social-section {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.social-section h2 {
+    color: #003399;
+    margin-bottom: 20px;
+}
+
+.social-section div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-section div span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.social-pink {
+    background-color: #ff66b2;
+}
+
+.social-red {
+    background-color: #ff4d4d;
+}
+
+.social-green {
+    background-color: #66ff66;
+}
+
+.teste {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    color: #000;
+    max-width: 800px;
+    text-align: center;
+}
