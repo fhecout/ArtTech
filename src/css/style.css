@@ -4,15 +4,20 @@ body {
     padding: 0;
     height: 100vh;
     overflow: auto;
+    background-color: #ffffff; /* Define um fundo branco para o body */
 }
 
 .nav-bar {
-    background-color: #004AAD;
+    background-image: linear-gradient(to right, #030407, #080d1a, #101728, #101728, #19233d);
     padding: 10px 0;
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
 }
 
 .nav-bar .container {
@@ -47,20 +52,16 @@ body {
 }
 
 .nav-links a {
-    color: #000;
     text-decoration: none;
-    font-size: 17px;
-    padding: 5px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    background-color: #ffffff;
+    font-size: 18px;
+    padding: 5px 30px;
+    transition: background-color 0.3s ease, color 0.3s;
+    color: #ceb35b;
 }
 
 .nav-links a:hover {
-    background-color: #ffffff;
     color: #000;
-    border-radius: 7px;
+    background-color: #ceb35b;
 }
 
 .content-wrapper {
@@ -69,11 +70,12 @@ body {
     background: url('/src/images/FotoFerramentas.png') no-repeat center center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 8%; /* Mantenha o border-radius */
+    overflow: hidden; /* Garante que o conteúdo dentro do contêiner também terá bordas arredondadas */
 }
 
 .overlay {
@@ -82,77 +84,42 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .content {
     position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    max-width: 800px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
-    border-radius: 10px;
+    z-index: 1;
 }
 
 .content h1 {
-    color: white;
-    font-size: 36px;
+    font-size: 3rem; /* Tamanho da fonte */
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.2; /* Espaçamento entre linhas */
+    white-space: pre-line; /* Preserva as quebras de linha */
+    color: #ffff;
 }
 
 .content p {
-    color: white;
-    line-height: 1.6;
-}
-
-.social-section {
-    position: relative;
-    z-index: 2;
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.social-section h2 {
-    color: #003399;
+    font-size: 1.5rem; /* Tamanho da fonte */
     margin-bottom: 20px;
+    color: #fff;
 }
 
-.social-section div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.social-section div span {
+.whatsappButton {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
+    padding: 10px 20px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Tamanho da fonte */
 }
 
-.social-pink {
-    background-color: #ff66b2;
+.whatsappButton:hover {
+    background: #1EBEA5;
 }
 
-.social-red {
-    background-color: #ff4d4d;
-}
 
-.social-green {
-    background-color: #66ff66;
-}
-
-.teste {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    color: #000;
-    max-width: 800px;
-    text-align: center;
-}

@@ -1,0 +1,38 @@
+.social-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 20%; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center;
+    box-sizing: border-box; /* Inclua o padding na largura e altura total */
+    height: 100%; /* Garante que a altura mínima seja 100% */
+    z-index: 2;
+    text-align: center; /* Centraliza o texto */
+}
+
+.social-section h2 {
+    color: #003399;
+    margin-bottom: 20px;
+}
+
+.social-section div {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 10px;
+}
+
+.social-section div img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
