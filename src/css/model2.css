@@ -1,57 +1,73 @@
 .model2 {
-    padding: 40px 20px;
-    background: #ffff;
-    text-align: center;
-    min-height: 100vh;
     position: relative;
-    z-index: 1;
-    border-radius: 0 0 4% 4%; /* Borda arredondada na parte inferior */
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0 0 4% 4%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.model2 h1 {
+.model2.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.model2 .text-content, .model2 .image-content {
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px; /* Espaçamento entre os elementos */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.model2 .text-content h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
 }
 
-.model2 p {
+.model2 .text-content p {
     font-size: 1rem;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    text-align: justify;
 }
 
-.social-section {
-    margin-top: 40px;
+.model2 .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.social-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+@media (max-width: 768px) {
+    .model2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .model2 .text-content, .model2 .image-content {
+        margin: 20px 0;
+        flex: none;
+        width: 100%;
+    }
 }
 
-.social-section div {
-    margin-bottom: 15px;
-}
-
-.social-section a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
 
 .whatsapp-button {
     position: fixed;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratica Soluções Industriais</title>
     <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/navbar.css">
     <link rel="stylesheet" href="/src/css/scrollbar.css">
     <link rel="stylesheet" href="/src/css/social.css">
     <link rel="stylesheet" href="/src/css/model2.css">
@@ -15,7 +16,7 @@
         <div class="nav-bar">
             <div class="container">
                 <div class="logo">
-                    <img src="image.png" alt="Pratica Logo">
+                    <img src="/mnt/data/image.png" alt="Pratica Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
@@ -35,63 +36,48 @@
             <a href="https://wa.me/5541999575249" class="whatsappButton">Atendimento WhatsApp</a>
         </div>
     </main>
-    
 
     <div class="model2">
-        <h1>O QUE É A ARTTECH?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatibus ipsam aut, voluptate perspiciatis numquam, dolores in iusto consectetur minus repellendus aspernatur placeat obcaecati fuga doloribus aliquam animi beatae facilis Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi, distinctio dolorem non illo amet fugiat excepturi tenetur omnis enim deleniti nisi voluptatibus laudantium impedit perspiciatis beatae, voluptates officia quia.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At architecto optio totam sit cupiditate sequi doloribus fugiat ipsam possimus illum voluptas dolor recusandae, et quae. Minima, non dolorum! Quia, consequuntur!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolor a sint, quia exercitationem et placeat nulla fugit dignissimos quo, voluptas, molestiae velit ipsam fuga sed repellendus consectetur vitae omnis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium quo eaque non labore, impedit officiis vero ipsa pariatur reiciendis rem itaque excepturi. Nesciunt molestiae maxime harum voluptatem eligendi eius.
-        </p>
-    
-        <div class="social-section">
-            <h2>NOSSAS REDES SOCIAIS</h2>
-            <div>
-                <a href="https://wa.me/5541999575249" target="_blank">
-                    <img src="src/images/Whatsapp.png" alt="WhatsApp Logo" class="social-icon"> (41) 9 9957-5249
-                </a>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/company/arttech/" target="_blank">
-                    <img src="src/images/linkedin.png" alt="LinkedIn Logo" class="social-icon"> @arttech
-                </a>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/arttech/" target="_blank">
-                    <img src="src/images/instagram.png" alt="Instagram Logo" class="social-icon"> @artech
-                </a>
-            </div>
+        <div class="text-content">
+            <h1>O QUE É A ARTTECH?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatibus ipsam aut, voluptate perspiciatis numquam, dolores in iusto consectetur minus repellendus aspernatur placeat obcaecati fuga doloribus aliquam animi beatae facilis Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi, distinctio dolorem non illo amet fugiat excepturi tenetur omnis enim deleniti nisi voluptatibus laudantium impedit perspiciatis beatae, voluptates officia quia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At architecto optio totam sit cupiditate sequi doloribus fugiat ipsam possimus illum voluptas dolor recusandae, et quae. Minima, non dolorum! Quia, consequuntur!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolor a sint, quia exercitationem et placeat nulla fugit dignissimos quo, voluptas, molestiae velit ipsam fuga sed repellendus consectetur vitae omnis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium quo eaque non labore, impedit officiis vero ipsa pariatur reiciendis rem itaque excepturi. Nesciunt molestiae maxime harum voluptatem eligendi eius lorem
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="src/images/Fabrica.jpg" alt="Arttech Image">
         </div>
     </div>
 
-
-    <div class="model3">
-        <h1>O QUE É A ARTTECH?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatibus ipsam aut, voluptate perspiciatis numquam, dolores in iusto consectetur minus repellendus aspernatur placeat obcaecati fuga doloribus aliquam animi beatae facilis Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sequi, distinctio dolorem non illo amet fugiat excepturi tenetur omnis enim deleniti nisi voluptatibus laudantium impedit perspiciatis beatae, voluptates officia quia.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At architecto optio totam sit cupiditate sequi doloribus fugiat ipsam possimus illum voluptas dolor recusandae, et quae. Minima, non dolorum! Quia, consequuntur!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolor a sint, quia exercitationem et placeat nulla fugit dignissimos quo, voluptas, molestiae velit ipsam fuga sed repellendus consectetur vitae omnis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint praesentium quo eaque non labore, impedit officiis vero ipsa pariatur reiciendis rem itaque excepturi. Nesciunt molestiae maxime harum voluptatem eligendi eius.
-        </p>
+    <div class="model4">
+        <div class="social-section">
+            <h2>Siga nos</h2>
+            <div>
+                <a href="#"><img src="facebook.png" alt="Facebook" class="social-icon">Facebook</a>
+            </div>
+            <div>
+                <a href="#"><img src="twitter.png" alt="Twitter" class="social-icon">Twitter</a>
+            </div>
+            <div>
+                <a href="#"><img src="instagram.png" alt="Instagram" class="social-icon">Instagram</a>
+            </div>
+        </div>
     
-
+        <form action="/enviar" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Botão do WhatsApp -->
-    <a href="https://wa.me/5541999575249" class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/5541999575249" class="whatsapp-button">
         <img src="src/images/Whatsapp.png" alt="WhatsApp">
     </a>
+
+    <script src="src/js/fadein.js"></script>
 </body>
 </html>

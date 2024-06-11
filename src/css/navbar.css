@@ -1,0 +1,84 @@
+.nav-bar {
+    background-image: linear-gradient(to right, #030407, #080d1a, #101728, #101728, #19233d);
+    padding: 10px 0;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+.nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0;
+    position: relative; /* Para posicionar o submenu */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 30px;
+    transition: background-color 0.3s ease, color 0.3s;
+    color: #ceb35b;
+}
+
+.nav-links a:hover {
+    color: #000;
+    background-color: #ceb35b;
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block; /* Mostra o submenu ao passar o mouse */
+}
+
+.dropdown-content {
+    display: none; /* Esconde o submenu por padrão */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Posiciona abaixo do item principal */
+}
+
+.dropdown-content a {
+    color: #ceb35b;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+    color: #000;
+}

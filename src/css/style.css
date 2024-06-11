@@ -7,63 +7,6 @@ body {
     background-color: #ffffff; /* Define um fundo branco para o body */
 }
 
-.nav-bar {
-    background-image: linear-gradient(to right, #030407, #080d1a, #101728, #101728, #19233d);
-    padding: 10px 0;
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 3;
-}
-
-.nav-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-left: 10%;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    align-items: center;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 30px;
-    transition: background-color 0.3s ease, color 0.3s;
-    color: #ceb35b;
-}
-
-.nav-links a:hover {
-    color: #000;
-    background-color: #ceb35b;
-}
-
 .content-wrapper {
     position: relative;
     min-height: 100vh;
