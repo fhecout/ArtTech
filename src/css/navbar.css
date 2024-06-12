@@ -3,7 +3,7 @@
     padding: 10px 0;
     height: 12vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     width: 100%;
@@ -25,7 +25,6 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-left: 10%;
 }
 
 .nav-links {
@@ -36,6 +35,8 @@
     padding: 0;
     height: 100%;
     align-items: center;
+    flex: 1; /* Permite que a lista ocupe o espaço disponível */
+    justify-content: center; /* Centraliza os itens na lista */
 }
 
 .nav-links li {
@@ -51,23 +52,24 @@
     color: #ceb35b;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links .dropdown:hover > a {
     color: #000;
     background-color: #ceb35b;
 }
 
-.nav-links li:hover .dropdown-content {
-    display: block; /* Mostra o submenu ao passar o mouse */
-}
-
-.dropdown-content {
+.nav-links .dropdown-content {
     display: none; /* Esconde o submenu por padrão */
     position: absolute;
-    background-color: #333;
+    background-color: #1c1f26; /* Tom de azul-escuro */
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
     top: 100%; /* Posiciona abaixo do item principal */
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block; /* Mostra o submenu ao passar o mouse */
 }
 
 .dropdown-content a {
