@@ -1,6 +1,6 @@
 .nav-bar {
     background-image: linear-gradient(to right, #030407, #080d1a, #101728, #101728, #19233d);
-    padding: 10px 0;
+    padding: 5px 0;
     height: 12vh;
     display: flex;
     justify-content: center;
@@ -50,6 +50,7 @@
     padding: 5px 30px;
     transition: background-color 0.3s ease, color 0.3s;
     color: #ceb35b;
+    border-radius: 30px;
 }
 
 .nav-links a:hover,
@@ -66,6 +67,7 @@
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
     top: 100%; /* Posiciona abaixo do item principal */
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas para o submenu */
 }
 
 .nav-links .dropdown:hover .dropdown-content {
@@ -78,6 +80,7 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas para os links do submenu */
 }
 
 .dropdown-content a:hover {

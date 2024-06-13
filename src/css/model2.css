@@ -8,7 +8,7 @@
     box-sizing: border-box;
     border-radius: 0 0 4% 4%;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0) rotateX(-10deg);
     transition: opacity 1s ease-out, transform 1s ease-out;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
 
 .model2.fade-in {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) rotateX(0deg);
 }
 
 .model2 .text-content, .model2 .image-content {
@@ -67,7 +67,6 @@
         width: 100%;
     }
 }
-
 
 .whatsapp-button {
     position: fixed;

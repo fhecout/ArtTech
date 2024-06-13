@@ -7,6 +7,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: -40px;
+    opacity: 0;
+    transform: translate3d(0, 100px, 0) rotateX(-10deg);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.model4.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg);
 }
 
 .social-section, form {

@@ -1,18 +1,35 @@
 
-document.addEventListener("DOMContentLoaded", function() {
-    const model2Section = document.querySelector('.model2');
+// Adicione este script no seu arquivo deslize.js
 
-    function handleScroll() {
-        const sectionPosition = model2Section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight;
+document.addEventListener('DOMContentLoaded', function() {
+    const model2 = document.querySelector('.model2');
 
-        if (sectionPosition < screenPosition) {
-            model2Section.classList.add('fade-in');
-            window.removeEventListener('scroll', handleScroll);
-        }
-    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                model2.classList.add('fade-in');
+            }
+        });
+    });
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    observer.observe(model2);
 });
+
+
+// Adicione este script no seu arquivo deslize.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const model4 = document.querySelector('.model4');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                model4.classList.add('visible');
+            }
+        });
+    });
+
+    observer.observe(model4);
+});
+
 
