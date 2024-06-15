@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maquinas-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto; /* Adiciona espaço na parte superior */
+    gap: 20px; /* Adiciona um espaço entre os textos */
+}
+
+.maquinas-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço */
+    box-sizing: border-box;
+}
+
+.maquinas-content:first-child {
+    margin-right: 10px; /* Adiciona espaço entre os dois blocos */
+}
+
+.maquinas-content h2 {
+    font-size: 3rem; /* Ajusta o tamanho do título */
+    margin-bottom: 20px;
+    color: #003366; /* Mantém a cor original */
+}
+
+.maquinas-content p {
+    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+    line-height: 1.6;
+    color: #333; /* Mantém a cor original */
+    text-align: justify;
+}
+
+.maquinas-content img {
+    width: 900px;
+    height: 550px;
+}
+
+.maquinas-content:nth-child(2) h2 {
+    padding: 10px;
+    border-radius: 8px;
+    color: #003366; /* Mantém a cor original */
+}
+
+@media (max-width: 768px) {
+    .maquinas-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maquinas-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
