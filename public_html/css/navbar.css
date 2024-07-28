@@ -22,9 +22,37 @@
 
 .logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhe conforme necessário */
     align-items: center;
-    height: 100%;
+    position: relative;
+    height: 170px; /* Mantém a altura da logo */
+}
+
+.logo-img {
+    position: absolute; /* Garante que as imagens se sobreponham */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Adiciona transição para opacidade e transformação */
+}
+
+.default-logo {
+    height: 170px;
+    opacity: 1;
+    transform: translateY(0); /* Posição inicial */
+}
+
+.scrolled-logo {
+    height: 100px; /* Tamanho menor para a segunda logo */
+    opacity: 0;
+    transform: translateY(50px); /* Posição inicial abaixo */
+}
+
+.nav-bar.scrolled .default-logo {
+    opacity: 0;
+    transform: translateY(-50px); /* Move a logo original para cima */
+}
+
+.nav-bar.scrolled .scrolled-logo {
+    opacity: 1;
+    transform: translateY(0); /* Move a segunda logo para a posição original */
 }
 
 .nav-links {
@@ -86,4 +114,58 @@
 .dropdown-content a:hover {
     background-color: #575757;
     color: #000;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .content-wrapper {
+        margin-top: 18vh; /* Ajusta conforme necessário para tablets */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .nav-bar {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-bar .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 100px; /* Ajusta a altura da logo para telas menores */
+    }
+
+    .logo-img {
+        height: 80px; /* Ajusta a altura da logo para telas menores */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .content-wrapper {
+        margin-top: 20vh; /* Ajusta conforme necessário para celulares */
+    }
 }

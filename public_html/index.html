@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica Soluções Industriais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/model2.css">
+    <link rel="stylesheet" href="css/model3.css">
+    <link rel="stylesheet" href="css/marca.css">
+    <!-- Adicione o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/logo2.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" class="logo-img default-logo">
+                    <img src="images/logo2.png" alt="Logo" class="logo-img scrolled-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#empresa" id="link-empresa">Empresa</a></li>
+                    <li class="dropdown">
+                        <a href="#">Soluções Industriais</a>
+                        <div class="dropdown-content">
+                            <a href="TPM.html">TPM</a>
+                            <a href="Maquinas.html">Desenvolvimento e Manufatura</a>
+                            <a href="manutencaoindustrial.html">Manutenção Industrial</a>
+                            <a href="autocad.html">Desenhos Industriais</a>
+                        </div>
+                    </li>
+                    <li><a href="#contato" id="link-contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="content-wrapper">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Descubra a<br>excelência em<br>soluções industriais</h1>
+            <p>Projetos inovadores e eficientes para otimizar sua produção.</p>
+            <a href="https://wa.me/5541999880289?text=Olá,%20gostaria%20de%20entrar%20em%20contato%20para%20obter%20informações%20sobre%20os%20serviços%20da%20ArtTech.%20Obrigado!" class="whatsappButton">Atendimento WhatsApp</a>
+        </div>
+    </main>
+    
+    <div class="empresa" id="empresa"></div>
+    <div class="model2">
+        <div class="text-content">
+            <h1>O QUE É A ARTTECH?</h1>
+            <p>uma nova empresa no mercado, somos dedicados a fornecer soluções industriais robustas que elevam a eficiência e a produtividade das fábricas. Com um compromisso inabalável com a robustez e a qualidade, nossa missão é transformar a sua operação industrial. Nossas máquinas e ferramentas duráveis garantem desempenho confiável, enquanto nossas soluções otimizam custos e reduzem desperdícios. Oferecemos consultoria personalizada para entender suas necessidades e suporte contínuo para garantir operações perfeitas. Escolha a ArtTech para robustez, economia e qualidade e transforme sua fábrica com um parceiro estratégico de confiança.
+            </p>
+            <div class="button-container">
+                <a href="/saibamais.html" class="saiba-mais-button">Saiba Mais</a>
+             </div>
+        </div>
+        <div class="image-content">
+            <img src="images/Fabrica.jpg" alt="Arttech Image">
+        </div>
+    </div>
+
+    <div id="contato"></div>
+    <div class="model4">
+        <div class="social-section">
+            <h2>Siga-nos</h2>
+            <div class="social-block">
+                <a href="https://web.facebook.com/profile.php?id=61561595240588"><img src="images/Facebook.png" alt="Facebook" class="social-icon">Facebook</a>
+            </div>
+            <div class="social-block">
+                <a href="https://www.linkedin.com/company/arttech-solu%C3%A7%C3%B5es-industriais/?viewAsMember=true"><img src="images/Linkedin.png" alt="Linkedin" class="social-icon">Linkedin</a>
+            </div>
+            <div class="social-block">
+                <a href="https://www.instagram.com/arttechsi?igsh=MWh0cDdlcnRwYnNiaQ=="><img src="images/instagram.png" alt="Instagram" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    
+        <div class="email-block">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Entre em contato:</h3>
+                    <p>
+                        <img src="images/email.png" alt="Email Icon" class="email-icon">
+                         <span id="email">Contato@Arttechproject.com</span>
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="mailto:contato@arttechproject.com" class="btn">Enviar Email</a>
+                        <button onclick="copyEmail()" class="btn">Copiar Email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <a href="https://wa.me/5541999880289?text=Olá,%20gostaria%20de%20entrar%20em%20contato%20para%20obter%20informações%20sobre%20os%20serviços%20da%20ArtTech.%20Obrigado!" class="whatsapp-button">
+        <img src="images/Whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <div class="modal fade" id="emailSuccessModal" tabindex="-1" aria-labelledby="emailSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailSuccessModalLabel">Email Enviado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Seu email foi enviado com sucesso.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Feito por Felipe Couto</p>
+            <div class="footer-links">
+                <a href="https://github.com/fhecout">Github</a>
+                <a href="https://www.linkedin.com/in/fhecout/">Linkedin</a>
+                <a href="https://www.instagram.com/fhecout/">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Adicione os scripts do Bootstrap e jQuery no final do body -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function copyEmail() {
+            const email = "contato@arttechproject.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copiado para a área de transferência");
+            }, (err) => {
+                console.error('Erro ao copiar o email: ', err);
+            });
+        }
+    </script>
+
+    <script src="js/fadein.js"></script>
+    <script src="js/deslize.js"></script>
+    <script src="js/logo.js"></script>
+</body>
+</html>

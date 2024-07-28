@@ -1,0 +1,204 @@
+.model2 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0 0 4% 4%;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) rotateX(-10deg);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.model2.fade-in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+}
+
+.model2 .text-content, .model2 .image-content {
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px; /* Espaçamento entre os elementos */
+    background-color: #ffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.model2 .text-content h1 {
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.model2 .text-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 100%;
+    text-align: justify;
+}
+
+.model2 .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .model2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .model2 .text-content, .model2 .image-content {
+        margin: 20px 0;
+        flex: none;
+        width: 100%;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.button-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.saiba-mais-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004080; /* Cor do site, você pode ajustar conforme necessário */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais-button:hover {
+    background-color: #003060; /* Cor de hover */
+}
+
+.email-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center buttons */
+}
+
+.contact-buttons .btn {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.email-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center buttons */
+    margin-top: 20px;
+}
+
+.contact-buttons .btn {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-buttons .btn:hover {
+    background-color: #0056b3;
+}

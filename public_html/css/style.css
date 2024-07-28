@@ -20,6 +20,7 @@ body {
     border-radius: 8%; /* Mantenha o border-radius */
     overflow: hidden; /* Garante que o conteúdo dentro do contêiner também terá bordas arredondadas */
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -64,4 +65,42 @@ body {
     background: #1EBEA5;
 }
 
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 10px;
+    }
 
+    .content h1 {
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .content p {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .whatsappButton {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+        padding: 8px 16px; /* Ajusta o padding para telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 5px;
+    }
+
+    .content h1 {
+        font-size: 2rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .content p {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .whatsappButton {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte para telas menores */
+        padding: 6px 12px; /* Ajusta o padding para telas menores */
+    }
+}

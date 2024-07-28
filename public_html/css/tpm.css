@@ -52,7 +52,12 @@ body {
     color: #003366; /* Mantém a cor original */
 }
 
+/* Responsividade para tablets */
 @media (max-width: 768px) {
+    body {
+        padding: 20px; /* Adiciona padding para evitar corte de texto */
+    }
+
     .tpm-section {
         flex-direction: column;
         align-items: center;
@@ -61,5 +66,43 @@ body {
     .tpm-content {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .tpm-content:first-child {
+        margin-right: 0; /* Remove espaço extra em telas menores */
+    }
+
+    .tpm-content h2 {
+        font-size: 1.4rem; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .tpm-content p {
+        font-size: 1.1rem; /* Ajusta o tamanho do texto para telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    body {
+        padding: 20px; /* Adiciona padding para evitar corte de texto */
+    }
+
+    .tpm-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tpm-content {
+        width: 100%;
+        margin-bottom: 0px;
+        margin: 20px;
+    }
+
+    .tpm-content h2 {
+        font-size: 1.2rem; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .tpm-content p {
+        font-size: 0.7rem; /* Ajusta o tamanho do texto para telas menores */
     }
 }

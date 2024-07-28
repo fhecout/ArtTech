@@ -57,6 +57,7 @@ body {
     color: #003366; /* Mantém a cor original */
 }
 
+/* Responsividade para tablets */
 @media (max-width: 768px) {
     .maquinas-section {
         flex-direction: column;
@@ -66,5 +67,26 @@ body {
     .maquinas-content {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .maquinas-content img {
+        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .maquinas-content h2 {
+        font-size: 2rem; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    .maquinas-content p {
+        font-size: 1rem; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    .maquinas-content img {
+        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
+        height: auto; /* Mantém a proporção da imagem */
     }
 }

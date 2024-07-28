@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autocad-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto; /* Adiciona espaço na parte superior */
+    gap: 20px; /* Adiciona um espaço entre os textos */
+}
+
+.autocad-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço */
+    box-sizing: border-box;
+}
+
+.autocad-content:first-child {
+    margin-right: 10px; /* Adiciona espaço entre os dois blocos */
+}
+
+.autocad-content h2 {
+    font-size: 3rem; /* Ajusta o tamanho do título */
+    margin-bottom: 20px;
+    color: #003366; /* Mantém a cor original */
+}
+
+.autocad-content p {
+    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+    line-height: 1.6;
+    color: #333; /* Mantém a cor original */
+    text-align: justify;
+}
+
+.autocad-content img {
+    width: 900px;
+    height: 550px;
+    margin-top: 50px; /* Adiciona margem superior para abaixar a imagem */
+}
+
+.autocad-content:nth-child(2) h2 {
+    padding: 10px;
+    border-radius: 8px;
+    color: #003366; /* Mantém a cor original */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .autocad-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .autocad-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .autocad-content img {
+        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .autocad-content h2 {
+        font-size: 2rem; /* Ajusta o tamanho do título em telas menores */
+    }
+
+    .autocad-content p {
+        font-size: 1rem; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    .autocad-content img {
+        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
