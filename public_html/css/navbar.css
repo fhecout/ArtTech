@@ -1,171 +1,179 @@
 .nav-bar {
-    background-image: linear-gradient(to right, #030407, #080d1a, #101728, #101728, #19233d);
-    padding: 5px 0;
-    height: 12vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
+    background: rgba(3, 4, 7, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    height: 80px;
     width: 100%;
+    position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar .container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
+    position: relative;
 }
 
 .logo {
+    position: absolute;
+    left: 40px;
+    height: 80px;
     display: flex;
-    justify-content: flex-start; /* Alinhe conforme necessário */
     align-items: center;
-    position: relative;
-    height: 170px; /* Mantém a altura da logo */
+    text-decoration: none;
+    margin-right: 20px;
 }
 
 .logo-img {
-    position: absolute; /* Garante que as imagens se sobreponham */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Adiciona transição para opacidade e transformação */
+    height: 80px;
+    width: auto;
+    transition: all 0.3s ease;
 }
 
 .default-logo {
-    height: 170px;
     opacity: 1;
-    transform: translateY(0); /* Posição inicial */
+    position: absolute;
 }
 
 .scrolled-logo {
-    height: 100px; /* Tamanho menor para a segunda logo */
     opacity: 0;
-    transform: translateY(50px); /* Posição inicial abaixo */
+    position: absolute;
+    height: 60px;
+}
+
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 15px 0 0 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #ceb35b;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(3, 4, 7, 0.95);
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    border-radius: 8px;
+    padding: 8px;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    background: rgba(206, 179, 91, 0.1);
+}
+
+.mobile-menu-btn {
+    position: absolute;
+    right: 40px;
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-bar .container {
+        padding: 0 20px;
+    }
+    
+    .logo {
+        left: 20px;
+    }
+    
+    .mobile-menu-btn {
+        right: 20px;
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(3, 4, 7, 0.98);
+        padding: 20px;
+        flex-direction: column;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .dropdown-content {
+        position: static;
+        transform: none;
+        background: transparent;
+        box-shadow: none;
+        padding: 10px 0;
+    }
+}
+
+.nav-bar.scrolled {
+    height: 70px;
 }
 
 .nav-bar.scrolled .default-logo {
     opacity: 0;
-    transform: translateY(-50px); /* Move a logo original para cima */
 }
 
 .nav-bar.scrolled .scrolled-logo {
     opacity: 1;
-    transform: translateY(0); /* Move a segunda logo para a posição original */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    align-items: center;
-    flex: 1; /* Permite que a lista ocupe o espaço disponível */
-    justify-content: center; /* Centraliza os itens na lista */
-}
-
-.nav-links li {
-    margin: 0;
-    position: relative; /* Para posicionar o submenu */
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 30px;
-    transition: background-color 0.3s ease, color 0.3s;
-    color: #ceb35b;
-    border-radius: 30px;
-}
-
-.nav-links a:hover,
-.nav-links .dropdown:hover > a {
-    color: #000;
-    background-color: #ceb35b;
-}
-
-.nav-links .dropdown-content {
-    display: none; /* Esconde o submenu por padrão */
-    position: absolute;
-    background-color: #1c1f26; /* Tom de azul-escuro */
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%; /* Posiciona abaixo do item principal */
-    border-radius: 0 0 10px 10px; /* Bordas arredondadas para o submenu */
-}
-
-.nav-links .dropdown:hover .dropdown-content {
-    display: block; /* Mostra o submenu ao passar o mouse */
-}
-
-.dropdown-content a {
-    color: #ceb35b;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 0 0 10px 10px; /* Bordas arredondadas para os links do submenu */
-}
-
-.dropdown-content a:hover {
-    background-color: #575757;
-    color: #000;
-}
-
-/* Responsividade para tablets */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .content-wrapper {
-        margin-top: 18vh; /* Ajusta conforme necessário para tablets */
-    }
-}
-
-/* Responsividade para celulares */
-@media (max-width: 480px) {
-    .nav-bar {
-        height: auto;
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .nav-bar .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .logo {
-        height: 100px; /* Ajusta a altura da logo para telas menores */
-    }
-
-    .logo-img {
-        height: 80px; /* Ajusta a altura da logo para telas menores */
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .content-wrapper {
-        margin-top: 20vh; /* Ajusta conforme necessário para celulares */
-    }
 }

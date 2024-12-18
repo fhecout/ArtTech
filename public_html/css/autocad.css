@@ -1,93 +1,305 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --primary: #2B4C7E;
+    --secondary: #567EBB;
+    --accent: #D4AF37;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --background: #F8F9FA;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow: auto;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.autocad-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1800px;
-    margin: 50px auto; /* Adiciona espaço na parte superior */
-    gap: 20px; /* Adiciona um espaço entre os textos */
-}
-
-.autocad-content {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ajusta a largura para ocupar todo o espaço */
     box-sizing: border-box;
 }
 
-.autocad-content:first-child {
-    margin-right: 10px; /* Adiciona espaço entre os dois blocos */
-}
-
-.autocad-content h2 {
-    font-size: 3rem; /* Ajusta o tamanho do título */
-    margin-bottom: 20px;
-    color: #003366; /* Mantém a cor original */
-}
-
-.autocad-content p {
-    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+body {
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333; /* Mantém a cor original */
-    text-align: justify;
+    color: var(--text-dark);
+    background-color: var(--background);
 }
 
-.autocad-content img {
-    width: 900px;
-    height: 550px;
-    margin-top: 50px; /* Adiciona margem superior para abaixar a imagem */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.autocad-content:nth-child(2) h2 {
-    padding: 10px;
+/* Hero Section */
+.hero-section {
+    background: var(--gradient);
+    padding: 100px 0;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.1) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.1) 75%);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Content Section */
+.content-section {
+    padding: 80px 0;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+}
+
+.info-card h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.info-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    padding: 25px;
+    background: var(--background);
     border-radius: 8px;
-    color: #003366; /* Mantém a cor original */
+    transition: transform 0.3s ease;
 }
 
-/* Responsividade para tablets */
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.service-item ul {
+    list-style: none;
+}
+
+.service-item ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-item ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2em;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+    background: var(--background);
+    border-radius: 8px;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit {
+    padding: 25px;
+    background: var(--background);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Contact Section */
+.info-card.contact {
+    text-align: center;
+    background: var(--gradient);
+    color: var(--white);
+}
+
+.info-card.contact h2 {
+    color: var(--white);
+}
+
+.info-card.contact h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn.secondary {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .autocad-section {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-card {
+        padding: 30px;
+    }
+
+    .services-grid,
+    .process-steps,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
         flex-direction: column;
-        align-items: center;
     }
 
-    .autocad-content {
+    .btn {
         width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .autocad-content img {
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        height: auto; /* Mantém a proporção da imagem */
+        text-align: center;
     }
 }
 
-/* Responsividade para celulares */
 @media (max-width: 480px) {
-    .autocad-content h2 {
-        font-size: 2rem; /* Ajusta o tamanho do título em telas menores */
+    .hero-content h1 {
+        font-size: 2rem;
     }
 
-    .autocad-content p {
-        font-size: 1rem; /* Ajusta o tamanho do texto em telas menores */
+    .info-card h2 {
+        font-size: 1.8rem;
     }
 
-    .autocad-content img {
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        height: auto; /* Mantém a proporção da imagem */
+    .service-item,
+    .step,
+    .benefit {
+        padding: 20px;
     }
 }

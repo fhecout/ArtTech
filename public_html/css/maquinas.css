@@ -1,92 +1,265 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset e estilos base */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    overflow: auto;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.maquinas-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1800px;
-    margin: 50px auto; /* Adiciona espaço na parte superior */
-    gap: 20px; /* Adiciona um espaço entre os textos */
-}
-
-.maquinas-content {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ajusta a largura para ocupar todo o espaço */
     box-sizing: border-box;
 }
 
-.maquinas-content:first-child {
-    margin-right: 10px; /* Adiciona espaço entre os dois blocos */
-}
-
-.maquinas-content h2 {
-    font-size: 3rem; /* Ajusta o tamanho do título */
-    margin-bottom: 20px;
-    color: #003366; /* Mantém a cor original */
-}
-
-.maquinas-content p {
-    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+body {
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333; /* Mantém a cor original */
-    text-align: justify;
+    color: #333;
+    overflow-x: hidden;
 }
 
-.maquinas-content img {
-    width: 900px;
-    height: 550px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.maquinas-content:nth-child(2) h2 {
-    padding: 10px;
-    border-radius: 8px;
-    color: #003366; /* Mantém a cor original */
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/Maquinas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
 }
 
-/* Responsividade para tablets */
+.hero-content {
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Overview Section */
+.overview-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.overview-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.image-content {
+    position: relative;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #004080, #0056b3);
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: #ceb35b;
+    color: #000;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ceb35b;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .overview-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .text-content {
+        order: 2;
+    }
+
+    .image-content {
+        order: 1;
+    }
+}
+
 @media (max-width: 768px) {
-    .maquinas-section {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
 
-    .maquinas-content {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .maquinas-content img {
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        height: auto; /* Mantém a proporção da imagem */
+    .cta-button {
+        width: 80%;
     }
 }
 
-/* Responsividade para celulares */
 @media (max-width: 480px) {
-    .maquinas-content h2 {
-        font-size: 2rem; /* Ajusta o tamanho do título em telas menores */
+    .hero-content h1 {
+        font-size: 1.8rem;
     }
 
-    .maquinas-content p {
-        font-size: 1rem; /* Ajusta o tamanho do texto em telas menores */
-    }
-
-    .maquinas-content img {
-        width: 100%; /* Ajusta a largura da imagem para 100% em telas menores */
-        height: auto; /* Mantém a proporção da imagem */
+    .text-content h2,
+    .features-section h2,
+    .cta-section h2 {
+        font-size: 2rem;
     }
 }

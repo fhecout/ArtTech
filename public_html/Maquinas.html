@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenvolvimento e Manufatura</title>
+    <meta name="description" content="Desenvolvimento e manufatura de máquinas industriais personalizadas - ArtTech. Soluções inovadoras para aumentar a eficiência da sua indústria.">
+    <title>Desenvolvimento e Manufatura | ArtTech</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/maquinas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="js/logo.js"></script>
     <link rel="icon" href="images/logo2.png" type="image/png">
 </head>
 <body>
     <header>
-        <div class="nav-bar">
+        <nav class="nav-bar">
             <div class="container">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="Logo" class="logo-img default-logo">
                     <img src="images/logo2.png" alt="Logo" class="logo-img scrolled-logo">
-                </div>
+                </a>
                 <ul class="nav-links">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/index.html#empresa" id="link-empresa">Empresa</a></li>
@@ -32,19 +34,87 @@
                     </li>
                     <li><a href="/index.html#contato" id="link-contato">Contato</a></li>
                 </ul>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="machines-page">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Desenvolvimento e Manufatura</h1>
+                <p class="subtitle">Soluções personalizadas para otimizar sua produção industrial</p>
+            </div>
+        </section>
+
+        <section class="overview-section">
+            <div class="container">
+                <div class="text-content">
+                    <h2>Inovação em Máquinas Industriais</h2>
+                    <p>Desenvolvemos soluções sob medida para aumentar a eficiência e produtividade da sua indústria. Nossa expertise em manufatura avançada nos permite criar máquinas e ferramentas que atendem às necessidades específicas do seu processo produtivo.</p>
+                </div>
+                <div class="image-content">
+                    <img src="images/Maquinas.jpg" alt="Máquinas Industriais" class="feature-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2>Nossos Diferenciais</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">🔧</div>
+                        <h3>Personalização Total</h3>
+                        <p>Projetos desenvolvidos especificamente para suas necessidades, garantindo máxima eficiência e adaptabilidade.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>Alta Performance</h3>
+                        <p>Máquinas projetadas para oferecer o melhor desempenho, aumentando a produtividade de sua operação.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🛠️</div>
+                        <h3>Tecnologia Avançada</h3>
+                        <p>Utilizamos as mais recentes tecnologias e inovações para garantir equipamentos de última geração.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📊</div>
+                        <h3>Suporte Técnico</h3>
+                        <p>Acompanhamento completo desde o projeto até a implementação, com suporte técnico especializado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para Otimizar sua Produção?</h2>
+                <p>Entre em contato conosco e descubra como podemos ajudar sua empresa a alcançar novos níveis de eficiência.</p>
+                <div class="cta-buttons">
+                    <a href="/index.html#contato" class="cta-button primary">Fale Conosco</a>
+                    <a href="tel:+554199880289" class="cta-button secondary">Ligue Agora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Entre em Contato</h3>
+                    <p>📱 WhatsApp: +55 41 99988-0289</p>
+                    <p>✉️ Email: Contato@Arttechproject.com</p>
+                </div>
             </div>
         </div>
-    </header>
-    <div class="maquinas-section">
-        <div class="maquinas-content">
-            <h2>Desenvolvimento e Manufatura de Máquinas e Ferramentas</h2>
-            <p>Nossa empresa é especializada no desenvolvimento e manufatura de máquinas e ferramentas de alta qualidade, projetadas para aumentar a eficiência e a produtividade de sua operação. Utilizamos tecnologia de ponta e inovação contínua para criar soluções que atendem às necessidades específicas de cada cliente.</p>
-            <p>Nosso compromisso com a qualidade garante que cada produto seja fabricado com os mais altos padrões, utilizando materiais duráveis e processos rigorosos. Além disso, oferecemos um atendimento personalizado e suporte técnico para assegurar o sucesso de nossos clientes em todos os momentos.</p>
-            <p>Se você busca soluções eficientes e personalizadas para suas operações, entre em contato conosco. Nossa equipe está pronta para ajudar sua empresa a alcançar novos níveis de desempenho com nossas máquinas e ferramentas avançadas.</p>
-        </div>
-        <div class="maquinas-content">
-            <img src="images/Maquinas.jpg" alt="">
-        </div>
-    </div>
+    </footer>
+
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>

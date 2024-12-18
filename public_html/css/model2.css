@@ -4,67 +4,156 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 80px 40px;
     box-sizing: border-box;
-    border-radius: 0 0 4% 4%;
     opacity: 0;
-    transform: translate3d(0, 20px, 0) rotateX(-10deg);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0, 20px, 0);
+    transition: all 0.8s ease-out;
+    background-color: #f8f9fa;
 }
 
 .model2.fade-in {
     opacity: 1;
-    transform: translate3d(0, 0, 0) rotateX(0deg);
+    transform: translate3d(0, 0, 0);
 }
 
 .model2 .text-content, .model2 .image-content {
-    padding: 20px;
+    padding: 40px;
     flex: 1;
-    margin: 0 10px; /* Espaçamento entre os elementos */
-    background-color: #ffff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 20px;
+}
+
+.model2 .text-content {
+    max-width: 600px;
 }
 
 .model2 .text-content h1 {
-    font-size: 2.9rem;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: bold;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.model2 .text-content h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #004080, #0056b3);
 }
 
 .model2 .text-content p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+}
+
+.model2 .text-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.model2 .text-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #4a4a4a;
     line-height: 1.6;
-    color: #666;
-    max-width: 100%;
-    text-align: justify;
+}
+
+.model2 .text-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #004080;
+    font-weight: bold;
 }
 
 .model2 .image-content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.model2 .image-content img:hover {
+    transform: scale(1.02);
+}
+
+.button-container {
+    margin-top: 35px;
+}
+
+.saiba-mais-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(90deg, #004080, #0056b3);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,64,128,0.2);
+}
+
+.saiba-mais-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,64,128,0.3);
+    background: linear-gradient(90deg, #0056b3, #004080);
+}
+
+@media (max-width: 1024px) {
+    .model2 {
+        padding: 60px 30px;
+    }
+    
+    .model2 .text-content, .model2 .image-content {
+        padding: 30px;
+        margin: 0 15px;
+    }
 }
 
 @media (max-width: 768px) {
     .model2 {
         flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        padding: 40px 20px;
     }
 
     .model2 .text-content, .model2 .image-content {
         margin: 20px 0;
-        flex: none;
+        padding: 20px;
         width: 100%;
+    }
+
+    .model2 .text-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .model2 .text-content h1:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .model2 .text-content p {
+        text-align: center;
+    }
+
+    .model2 .text-content ul li {
+        text-align: left;
+    }
+
+    .button-container {
+        text-align: center;
     }
 }
 
@@ -91,27 +180,6 @@
 .social-icon img {
     width: 40px;
     height: 40px;
-}
-
-
-.button-container {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.saiba-mais-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #004080; /* Cor do site, você pode ajustar conforme necessário */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.saiba-mais-button:hover {
-    background-color: #003060; /* Cor de hover */
 }
 
 .email-block {
@@ -155,7 +223,6 @@
 .contact-buttons .btn:hover {
     background-color: #0056b3;
 }
-
 
 .contact-container {
     text-align: center;

@@ -1,17 +1,45 @@
+/* Variáveis para personalização fácil */
+:root {
+    --scrollbar-width: 10px;
+    --scrollbar-track: #f1f1f1;
+    --scrollbar-thumb: #2B4C7E;
+    --scrollbar-thumb-hover: #567EBB;
+}
+
+/* Estilização para navegadores Webkit (Chrome, Safari, etc) */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
+    width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor do fundo da barra de rolagem */
-    border-radius: 10px; /* Borda arredondada */
+    background: var(--scrollbar-track);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #19233d;
-    border-radius: 10px; /* Borda arredondada */
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbar-track);
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #19233d; /* Cor da barra de rolagem quando em hover */
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Estilização para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Esconde a scrollbar em dispositivos móveis mantendo a funcionalidade */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-width: 1px;
+    }
 }

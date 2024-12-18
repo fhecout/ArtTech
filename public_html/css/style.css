@@ -1,24 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
     overflow: auto;
-    background-color: #ffffff; /* Define um fundo branco para o body */
+    background-color: #ffffff;
+    line-height: 1.6;
 }
 
 .content-wrapper {
     position: relative;
     min-height: 100vh;
-    background: url('/images/FotoFerramentas.png') no-repeat center center;
+    background: url('/images/FotoFerramentas.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
-    border-radius: 8%; /* Mantenha o border-radius */
-    overflow: hidden; /* Garante que o conteúdo dentro do contêiner também terá bordas arredondadas */
+    border-radius: 0;
+    overflow: hidden;
 }
 
 .overlay {
@@ -27,80 +28,336 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
 }
 
 .content {
     position: relative;
     z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .content h1 {
-    font-size: 3rem; /* Tamanho da fonte */
-    margin-bottom: 10px;
-    font-weight: bold;
-    line-height: 1.2; /* Espaçamento entre linhas */
-    white-space: pre-line; /* Preserva as quebras de linha */
-    color: #ffff;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: pre-line;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out;
 }
 
 .content p {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
     color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.3s;
 }
 
 .whatsappButton {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 18px 40px;
     background: #25D366;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    animation: fadeInUp 1s ease-out 0.6s;
 }
 
 .whatsappButton:hover {
     background: #1EBEA5;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos base para todos os dispositivos */
+:root {
+    --primary-color: #25D366;
+    --hover-color: #1EBEA5;
+    --text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos responsivos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+/* Desktop grande (1200px e acima) */
+@media (min-width: 1200px) {
+    .content {
+        max-width: 1140px;
+    }
+    
+    .content h1 {
+        font-size: 4rem;
+    }
+    
+    .content p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Desktop médio (992px a 1199px) */
+@media (max-width: 1199px) {
+    .content {
+        max-width: 960px;
+    }
+    
+    .content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .content p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablet (768px a 991px) */
+@media (max-width: 991px) {
+    .content {
+        max-width: 720px;
+        padding: 0 20px;
+    }
+    
+    .content h1 {
+        font-size: 3rem;
+    }
+    
+    .content p {
+        font-size: 1.4rem;
+    }
+    
+    .content-wrapper {
+        padding: 30px;
+    }
+    
+    .whatsappButton {
+        padding: 15px 30px;
+    }
+    
+    .model4 {
+        padding: 40px 20px;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .social-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Celular grande (576px a 767px) */
+@media (max-width: 767px) {
+    .content {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+    
+    .content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .content p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+    
+    .content-wrapper {
+        padding: 20px;
+    }
+    
+    .whatsappButton {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .navbar {
+        padding: 10px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.95);
+        transition: 0.3s;
+        padding: 20px;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Celular pequeno (até 575px) */
+@media (max-width: 575px) {
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .content p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    .content-wrapper {
+        padding: 15px;
+    }
+    
+    .whatsappButton {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .marca-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .marca-item {
+        padding: 15px;
+    }
+    
+    .marca-item img {
+        max-width: 200px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 320px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content p {
+        font-size: 1rem;
+    }
+    
+    .whatsappButton {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes de orientação para dispositivos móveis */
+@media (orientation: landscape) and (max-height: 500px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+    
+    .content h1 {
+        font-size: 2rem;
+    }
+    
+    .content p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
 }
 
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     .content-wrapper {
-        padding: 10px;
+        padding: 20px;
     }
 
     .content h1 {
-        font-size: 2.5rem; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 2.8rem;
     }
 
     .content p {
-        font-size: 1.2rem; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 1.4rem;
     }
 
     .whatsappButton {
-        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
-        padding: 8px 16px; /* Ajusta o padding para telas menores */
+        font-size: 1.1rem;
+        padding: 12px 24px;
     }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
     .content-wrapper {
-        padding: 5px;
+        padding: 15px;
     }
 
     .content h1 {
-        font-size: 2rem; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 2.2rem;
     }
 
     .content p {
-        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 1.2rem;
     }
 
     .whatsappButton {
-        font-size: 0.8rem; /* Ajusta o tamanho da fonte para telas menores */
-        padding: 6px 12px; /* Ajusta o padding para telas menores */
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Otimização para dispositivos de toque */
+@media (hover: none) {
+    .whatsappButton:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+    
+    .nav-links a:hover {
+        background: none;
+        color: var(--primary-color);
     }
 }
